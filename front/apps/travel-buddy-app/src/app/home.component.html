@@ -1,0 +1,170 @@
+  <!-- Hero Section -->
+  <main class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex flex-col items-center justify-center text-center px-4">
+    <!-- Background Decor (Abstract gradients) -->
+    <div class="absolute inset-0 z-0 flex items-center justify-center overflow-hidden pointer-events-none">
+      <div class="absolute w-[800px] h-[800px] bg-brand-light/10 rounded-full blur-3xl -top-40 -left-20"></div>
+      <div class="absolute w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-3xl top-40 -right-20"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-brand-dark leading-tight">
+        Maceraya Ortak Ol, <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accentLight">Masrafları Bölüş.</span>
+      </h1>
+      <p class="mt-6 text-xl md:text-2xl text-gray-500 mb-12 max-w-2xl mx-auto font-medium">
+        Güvenilir yol arkadaşını bul, bütçeni koru ve yepyeni deneyimlere güvenle yelken aç.
+      </p>
+
+      <!-- Search Bar -->
+      <div class="bg-white p-3 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 flex flex-col md:flex-row items-center gap-2 max-w-5xl mx-auto w-full relative z-20">
+        
+        <!-- Nereden -->
+        <div class="flex-1 flex items-center px-4 py-2 border-r border-gray-100 w-full group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-accent mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          </svg>
+          <div class="text-left w-full">
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Nereden</p>
+            <input type="text" placeholder="İstanbul" class="w-full text-sm font-semibold text-brand-dark focus:outline-none placeholder-brand-dark bg-transparent">
+          </div>
+        </div>
+
+        <!-- Nereye -->
+        <div class="flex-1 flex items-center px-4 py-2 border-r border-gray-100 w-full group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 mr-3 group-focus-within:text-brand-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          <div class="text-left w-full">
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Nereye</p>
+            <input type="text" placeholder="Paris" class="w-full text-sm font-semibold text-gray-400 focus:outline-none placeholder-gray-400 bg-transparent">
+          </div>
+        </div>
+
+        <!-- Zaman -->
+        <div class="flex-1 flex items-center px-4 py-2 border-r border-gray-100 w-full group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 mr-3 group-focus-within:text-brand-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <div class="text-left w-full">
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Zaman</p>
+            <input type="text" placeholder="Ağu - Eyl" class="w-full text-sm font-semibold text-gray-400 focus:outline-none placeholder-gray-400 bg-transparent">
+          </div>
+        </div>
+
+        <!-- Kişi -->
+        <div class="flex-1 flex items-center px-4 py-2 w-full group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 mr-3 group-focus-within:text-brand-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <div class="text-left w-full">
+            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Kişi</p>
+            <input type="text" placeholder="2" class="w-full text-sm font-semibold text-gray-400 focus:outline-none placeholder-gray-400 bg-transparent">
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="w-full md:w-auto mt-2 md:mt-0 bg-gradient-to-r from-brand-accent to-brand-accentLight hover:from-brand-accentLight hover:to-brand-accent text-white font-bold py-4 px-8 rounded-full shadow-[0_4px_14px_0_rgba(245,158,11,0.39)] transition-all duration-200 hover:shadow-[0_6px_20px_rgba(245,158,11,0.23)] active:scale-95 flex-shrink-0">
+          Arkadaş Bul
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Neden TravelBuddy? -->
+  <section class="py-24 bg-white relative z-10 border-t border-gray-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-sm text-brand-accent font-bold tracking-widest uppercase mb-2">Güvenli Seyahat</h2>
+        <p class="text-3xl leading-8 font-extrabold tracking-tight text-brand-dark sm:text-4xl">
+          Neden TravelBuddy?
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Feature 1 -->
+        <div class="relative bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-brand-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-light group-hover:text-white text-brand-light transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-dark mb-3">Doğrulanmış Profiller</h3>
+          <p class="text-gray-500 leading-relaxed">Tüm kullanıcılar kimlik onayı (KYC) süreçlerinden geçer. Kiminle seyahat ettiğinizi %100 bilirsiniz.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="relative bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 group-hover:text-white text-green-500 transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-dark mb-3">Ortak Kasa (Escrow)</h3>
+          <p class="text-gray-500 leading-relaxed">Ödemeleriniz seyahat başarıyla gerçekleşene kadar güvenli havuz hesabımızda tutulur. Dolandırılma riski sıfır.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="relative bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white text-brand-accent transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-dark mb-3">Akıllı Eşleşme</h3>
+          <p class="text-gray-500 leading-relaxed">Yapay zeka destekli algoritmamız, seyahat alışkanlıklarınıza ve bütçenize en uygun arkadaşı saniyeler içinde bulur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Trips Grid -->
+  <section class="py-24 bg-gray-50 relative border-t border-gray-200/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row justify-between items-end mb-14">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-extrabold text-brand-dark tracking-tight">Yaklaşan Seyahatler</h2>
+          <p class="mt-3 text-lg text-gray-500">Maceraya katılmak için hazır bekleyen sıcak ilanları keşfet ve çantana hazırlan.</p>
+        </div>
+        <a href="#" class="hidden md:flex items-center gap-2 text-brand font-bold hover:text-brand-dark transition-colors mt-4 md:mt-0">
+          Tümünü Gör 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Grid of 3 Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        @for (trip of mockTrips; track trip.userName) {
+          <travel-buddy-travel-card
+            class="w-full flex justify-center"
+            [destination]="trip.destination"
+            [startDate]="trip.startDate"
+            [endDate]="trip.endDate"
+            [budget]="trip.budget"
+            [userName]="trip.userName"
+            [userAvatar]="trip.userAvatar"
+            (matchRequested)="onMatchRequested(trip.userName)">
+          </travel-buddy-travel-card>
+        }
+      </div>
+      
+      <div class="mt-12 text-center md:hidden">
+        <button class="bg-white text-brand-dark border border-gray-200 font-bold py-3 px-8 rounded-full shadow-sm hover:bg-gray-50 active:scale-95 transition-all">
+          Tüm İlanları Keşfet
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Simple Footer -->
+  <footer class="bg-brand-dark text-gray-300 py-12 text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <span class="text-2xl font-extrabold tracking-tight text-white mb-4 block">
+        Travel<span class="text-brand-accent">Buddy</span>
+      </span>
+      <p class="text-sm opacity-70">© 2026 TravelBuddy. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
