@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
   imports: [TravelCardComponent, CommonModule, RouterModule],
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   mockTrips = [
@@ -17,7 +18,8 @@ export class HomeComponent {
       endDate: new Date(new Date().setDate(new Date().getDate() + 9)),
       budget: '3000₺ - 5000₺',
       userName: 'Ahmet Yılmaz',
-      userAvatar: 'https://randomuser.me/api/portraits/men/32.jpg'
+      userAvatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+      coverImage: 'https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=2070&auto=format&fit=crop'
     },
     {
       destination: 'Roma, İtalya',
@@ -25,7 +27,8 @@ export class HomeComponent {
       endDate: new Date(new Date().setDate(new Date().getDate() + 20)),
       budget: '€500 - €800',
       userName: 'Selin Demir',
-      userAvatar: 'https://randomuser.me/api/portraits/women/44.jpg'
+      userAvatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+      coverImage: 'https://images.unsplash.com/photo-1552832233-9f048ebc9202?q=80&w=2070&auto=format&fit=crop'
     },
     {
       destination: 'Bali, Endonezya',
@@ -33,7 +36,8 @@ export class HomeComponent {
       endDate: new Date(new Date().setDate(new Date().getDate() + 45)),
       budget: '$1000 - $1500',
       userName: 'Can Kaya',
-      userAvatar: 'https://randomuser.me/api/portraits/men/85.jpg'
+      userAvatar: 'https://randomuser.me/api/portraits/men/85.jpg',
+      coverImage: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2038&auto=format&fit=crop'
     }
   ];
 
