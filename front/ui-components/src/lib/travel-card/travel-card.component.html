@@ -1,63 +1,95 @@
-<div class="relative w-full max-w-sm rounded-2xl bg-surface-glass backdrop-blur-md border border-white/20 shadow-glass overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-soft">
+<div class="w-full max-w-sm bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.12)] transition-all duration-300 border border-gray-100 overflow-hidden relative group">
   
-  <!-- Image Header (Gradient Placeholder) -->
-  <div class="h-32 w-full bg-gradient-to-br from-brand-dark to-brand relative">
-    <div class="absolute inset-0 bg-black/10"></div>
-    <!-- Destination Badge -->
-    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-brand-dark text-sm font-semibold shadow-sm flex items-center gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-      {{ destination() }}
+  <!-- Destination Cover Image (Banner) -->
+  <div class="relative h-48 w-full overflow-hidden">
+    <img [src]="coverImage()" [alt]="destination()" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+    <!-- Gradient Overlay for better badge readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10"></div>
+    
+    <!-- Top Badges -->
+    <div class="absolute top-4 left-4">
+      <span class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/20 shadow-sm flex items-center gap-1">
+        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div> Aktif İlan
+      </span>
+    </div>
+    
+    <!-- Match Percentage (Fake data for visual) -->
+    <div class="absolute top-4 right-4">
+      <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-accent/90 backdrop-blur-md border-2 border-white text-white font-extrabold text-xs shadow-lg">
+        %98
+      </div>
+    </div>
+    
+    <!-- Destination Text over image -->
+    <div class="absolute bottom-4 left-4 right-4">
+      <h3 class="text-2xl font-extrabold text-white tracking-tight leading-tight">{{ destination() }}</h3>
     </div>
   </div>
 
-  <!-- Card Body -->
-  <div class="p-5 pt-12 relative bg-white/80">
-    <!-- User Avatar - Absolute positioned overlapping header -->
-    <div class="absolute -top-10 left-5">
-      <img [src]="userAvatar()" [alt]="userName()" class="w-20 h-20 rounded-full border-4 border-white shadow-md object-cover bg-gray-100">
-    </div>
+  <!-- Content Section with Overlapping Avatar -->
+  <div class="px-6 pt-12 pb-6 relative">
     
-    <!-- User Name & Match Button Container -->
-    <div class="flex justify-between items-end mb-4">
-      <div class="pt-2">
-        <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">Yol Arkadaşı</p>
-        <h3 class="text-xl font-bold text-brand-dark leading-none">{{ userName() }}</h3>
+    <!-- Overlapping Avatar -->
+    <div class="absolute -top-10 right-6 z-10">
+      <div class="relative">
+        <img [src]="userAvatar()" [alt]="userName()" class="w-20 h-20 rounded-full border-4 border-white shadow-lg object-cover">
+        <!-- Verified Badge -->
+        <div class="absolute bottom-0 right-0 bg-blue-500 text-white rounded-full p-1 border-2 border-white shadow-sm" title="Doğrulanmış Profil">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+        </div>
       </div>
-      
-      <button 
-        (click)="onMatchClick()"
-        class="bg-brand-accent hover:bg-brand-accentLight text-white font-bold py-2.5 px-6 rounded-full shadow-[0_4px_14px_0_rgba(245,158,11,0.39)] transition-all duration-200 hover:shadow-[0_6px_20px_rgba(245,158,11,0.23)] active:scale-95 focus:outline-none">
-        Eşleş
-      </button>
     </div>
 
-    <!-- Details Grid -->
-    <div class="grid grid-cols-2 gap-3 mt-6">
-      <div class="flex flex-col bg-gray-50/70 p-3.5 rounded-xl border border-gray-100/50">
-        <div class="flex items-center gap-1.5 text-gray-400 mb-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- User Name -->
+    <div class="mb-5">
+      <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Yol Arkadaşın</p>
+      <p class="text-lg font-bold text-brand-dark">{{ userName() }}</p>
+    </div>
+
+    <!-- Trip Details Grid -->
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <!-- Dates -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400 group-hover:text-brand-accent transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
-          <span class="text-[11px] font-semibold uppercase tracking-wider">Tarih</span>
         </div>
-        <span class="text-sm font-semibold text-brand-dark">
-          {{ startDate() | date:'dd MMM' }} - {{ endDate() | date:'dd MMM' }}
-        </span>
+        <div>
+          <p class="text-[10px] font-bold text-gray-400 uppercase">Tarih</p>
+          <p class="text-sm font-bold text-brand-dark">{{ startDate() | date:'d MMM' }} - {{ endDate() | date:'d MMM' }}</p>
+        </div>
       </div>
-      
-      <div class="flex flex-col bg-gray-50/70 p-3.5 rounded-xl border border-gray-100/50">
-        <div class="flex items-center gap-1.5 text-gray-400 mb-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+      <!-- Budget -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-green-500 group-hover:bg-green-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <span class="text-[11px] font-semibold uppercase tracking-wider">Bütçe</span>
         </div>
-        <span class="text-sm font-semibold text-brand-dark">{{ budget() }}</span>
+        <div>
+          <p class="text-[10px] font-bold text-gray-400 uppercase">Tahmini Bütçe</p>
+          <p class="text-sm font-bold text-brand-dark">{{ budget() }}</p>
+        </div>
       </div>
     </div>
 
+    <!-- Match Button -->
+    <button 
+      (click)="onMatchClick()"
+      class="w-full relative overflow-hidden bg-white text-brand-dark border-2 border-gray-100 font-bold py-4 rounded-xl shadow-sm hover:border-brand hover:text-brand transition-all duration-300 active:scale-95 group/btn">
+      <span class="relative z-10 flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.381z" clip-rule="evenodd" />
+        </svg>
+        Hemen Eşleş
+      </span>
+      <!-- Hover effect layer -->
+      <div class="absolute inset-0 bg-brand/5 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+    </button>
+    
   </div>
 </div>

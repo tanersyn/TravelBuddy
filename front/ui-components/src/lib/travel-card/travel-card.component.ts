@@ -15,6 +15,7 @@ export class TravelCardComponent {
   budget = input.required<string>();
   userAvatar = input.required<string>();
   userName = input.required<string>();
+  coverImage = input.required<string>();
   
   // Angular 17+ Signals Output
   matchRequested = output<void>();

@@ -1,0 +1,107 @@
+<!-- Full Screen Immersive Background -->
+<div class="relative min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-gray-900 overflow-hidden">
+  
+  <!-- Breathtaking Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=2068&auto=format&fit=crop" alt="Immersive Travel Background" class="w-full h-full object-cover scale-105 animate-[pulse_20s_ease-in-out_infinite]">
+    <!-- Dark/Blue Gradient Overlay for text readability and premium feel -->
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-dark/90 via-brand-dark/50 to-brand-accent/30"></div>
+  </div>
+
+  <!-- Floating Navigation / Logo -->
+  <div class="absolute top-8 left-8 z-20">
+    <a routerLink="/" class="text-3xl font-extrabold tracking-tighter text-white drop-shadow-lg hover:opacity-80 transition-opacity">
+      Travel<span class="text-brand-accent">Buddy</span>
+    </a>
+  </div>
+
+  <!-- Frosted Glass Centered Form Container -->
+  <div class="relative z-10 w-full max-w-lg">
+    
+    <!-- Outer Glass Panel -->
+    <div class="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2rem] p-8 sm:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.4)] relative overflow-hidden">
+      
+      <!-- Decorative Glow inside panel -->
+      <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-accent/40 blur-[80px] rounded-full pointer-events-none"></div>
+
+      <!-- Header -->
+      <div class="mb-10 text-center relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-6">
+          <span class="flex h-2 w-2 rounded-full bg-brand-accent"></span>
+          <span class="text-xs font-bold tracking-widest uppercase text-white">Sınırlı Kontenjan</span>
+        </div>
+        <h2 class="text-4xl font-extrabold text-white tracking-tighter mb-2">Maceraya Başla</h2>
+        <p class="text-gray-300 font-light">Hesabınızı oluşturun, eşleşin ve dünyayı yarı fiyatına keşfetmeye başlayın.</p>
+      </div>
+
+      <!-- Form -->
+      <form class="space-y-5 relative z-10">
+        <!-- Name Input -->
+        <div class="group">
+          <label for="name" class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 ml-1 group-focus-within:text-brand-accent transition-colors">Ad Soyad</label>
+          <div class="relative">
+            <input id="name" name="name" type="text" placeholder="Örn: Ahmet Yılmaz" required 
+                   class="block w-full px-5 py-4 bg-black/20 border border-white/10 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:bg-black/40 transition-all font-medium backdrop-blur-sm">
+          </div>
+        </div>
+
+        <!-- Email Input -->
+        <div class="group">
+          <label for="email" class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 ml-1 group-focus-within:text-brand-accent transition-colors">E-posta adresi</label>
+          <div class="relative">
+            <input id="email" name="email" type="email" placeholder="ornek@mail.com" required 
+                   class="block w-full px-5 py-4 bg-black/20 border border-white/10 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:bg-black/40 transition-all font-medium backdrop-blur-sm">
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="group">
+          <label for="password" class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2 ml-1 group-focus-within:text-brand-accent transition-colors">Şifre</label>
+          <div class="relative">
+            <input id="password" name="password" type="password" placeholder="••••••••" required 
+                   class="block w-full px-5 py-4 bg-black/20 border border-white/10 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:bg-black/40 transition-all font-medium backdrop-blur-sm">
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-4">
+          <button type="button" class="relative w-full overflow-hidden bg-brand-accent text-white font-extrabold py-4 px-4 rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] focus:outline-none transition-all duration-300 active:scale-95 group/btn">
+            <span class="relative z-10 flex items-center justify-center gap-2">
+              Kayıt Ol ve Eşleş
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover/btn:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <div class="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+          </button>
+        </div>
+      </form>
+      
+      <!-- Footer Link -->
+      <div class="mt-8 text-center relative z-10">
+        <p class="text-gray-400 text-sm">
+          Zaten hesabınız var mı? 
+          <a routerLink="/login" class="font-bold text-white hover:text-brand-accent transition-colors underline decoration-brand-accent/50 underline-offset-4">Giriş Yap</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Badges for extra trust -->
+  <div class="absolute bottom-8 left-0 right-0 flex justify-center gap-8 opacity-60 pointer-events-none hidden sm:flex">
+    <div class="flex items-center gap-2 text-white text-sm font-medium">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+      Güvenli Ödeme
+    </div>
+    <div class="flex items-center gap-2 text-white text-sm font-medium">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+      Doğrulanmış Profiller
+    </div>
+  </div>
+
+</div>
